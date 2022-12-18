@@ -7,13 +7,13 @@
 int[,] GetMatrix(int rowsCount, int columnsCount, int leftRange=0, int rightRange=50)
 {
     int[,] matr = new int[rowsCount, columnsCount];
-    Random rand = new Random();
+    //Random rand = new Random();
 
     for (int i = 0; i < matr.GetLength(0); i++)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-            matr[i, j] = rand.Next(leftRange, rightRange + 1);
+           matr[i, j] = new Random().Next(leftRange, rightRange + 1);
         }
     }
 
